@@ -6,7 +6,7 @@ import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Topnav from "./partials/Topnav";
 import Dropdown from "./partials/Dropdown";
-import Loading from "./loading";
+import Loading from "./Loading";
 import Cards from "./partials/Cards";
 
 const Tvshows = () => {
