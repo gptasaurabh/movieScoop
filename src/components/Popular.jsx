@@ -6,24 +6,22 @@ import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Topnav from "./partials/Topnav";
 import Dropdown from "./partials/Dropdown";
-import Loading from "./loading";
+import Loading from "./Loading";
 import Cards from "./partials/Cards";
 
 const Popular = () => {
-  document.title = "SCSDB | Popular" ;
+  document.title = "SCSDB | Popular";
   const navigate = useNavigate();
   const [category, setcategory] = useState("movie");
   const [popular, setpopular] = useState([]);
   const [page, setpage] = useState(1);
   const [hasMore, sethasMore] = useState(true);
- 
 
   const GetPopular = async () => {
     try {
       const { data } = await axios.get(
         `https://api.themoviedb.org/3/${category}/popular?api_key=72ec8e3a7c9cdca894eca33efc30bdba&page=${page}`
       );
-     
 
       // setpopular(data.results);
       if (data.results.length > 0) {
@@ -70,7 +68,6 @@ const Popular = () => {
             func={(e) => setcategory(e.target.value)}
           />
           <div className="w-[2%]"></div>
-          
         </div>
       </div>
       <InfiniteScroll
