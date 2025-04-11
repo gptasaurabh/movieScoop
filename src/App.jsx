@@ -6,7 +6,7 @@ import Trending from "./components/Trending";
 import Popular from "./components/Popular";
 import Movie from "./components/Movie";
 import Tvshows from "./components/Tvshows";
-import People from "./components/people";
+import People from "./components/People";
 
 const App = () => {
   return (
